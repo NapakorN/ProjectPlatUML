@@ -1,0 +1,66 @@
+car.puml
+@startuml
+
+class Car {
+  String plate
+  String brand
+  void operate()
+}
+
+class Engine {
+  int  capacity
+  void Run()
+  void Start()
+  void Stop()
+
+}
+
+class Stereo {
+  void Play()
+
+}
+
+class Door {
+  void open()
+
+}
+
+class piston {
+  void transmitpower()
+
+}
+
+
+class sparkplugs {
+  void provideelectricalenergy()
+
+}
+
+class Radio {
+  void playmusicbydj()
+
+}
+
+class Cassette {
+  void yourgreatmusic()
+
+}
+class tuner {
+  void customradio()
+
+}
+class Handle {
+  void pulladoor()
+
+}
+Car "1" *-- "1" Engine : has
+Car "1" *-- "1" Stereo : has
+Car "1" *-- "2.5" Door : has
+Engine "1" *-- "4" piston : has
+Engine "1" *-- "4" sparkplugs : has
+Stereo "1" *-- "1" Radio : has
+Stereo "1" *-- "1" Cassette : has
+Radio "1" *-- "1" tuner : has
+Door "1" *-- "1" Handle : has
+
+@enduml
